@@ -9,3 +9,5 @@ This is a library of the projects that I worked on during my time at Georgetown 
   - Binary Search Tree and Splaying
   - Move-To-Front list
   - Hashing (Chaining and Open Addressing)
+
+Please contact me at mk1955@georgetown.edu regarding any questions.

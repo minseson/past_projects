@@ -2,7 +2,7 @@
 
 - [Goals](#goals)
 - [Description](#description)
-- [Specification and requirements](#specification-and-requirements)
+- [Specification](#specification)
 
 ## Goals
 
@@ -27,7 +27,7 @@ The 19th century mathematical physicist, James Maxwell, is best-known for develo
 
 In other words, Maxwell envisioned a box split into two halves, with a door between the parts that could be opened or closed by a "demon" who observed every particle in the box. By carefully opening and closing the door at the correct moments, the demon could place all the fast-moving (i.e., hot) particles on one side of the door and all the slow-moving (i.e., cold) particles on the other side, reducing the entropy of the system.
 
-## Specification and requirements
+## Specification
 
 ### Specification
 

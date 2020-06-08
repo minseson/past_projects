@@ -1,0 +1,3 @@
+main.o: main.cpp main.h MTFList.h Node.h
+Node.o: Node.cpp Node.h
+MTFList.o: MTFList.cpp MTFList.h Node.h

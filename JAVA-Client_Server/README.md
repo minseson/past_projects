@@ -2,9 +2,6 @@
 
 - [Goals](#goals)
 - [Description](#description)
-- [Specification and requirements](#specification-and-requirements)
-- [Provided files](#provided-files)
-- [Grading rubric](#grading-rubric)
 
 ## Goals
 

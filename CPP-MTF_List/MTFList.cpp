@@ -12,7 +12,7 @@ void MTFList::readFile(string filename)
 
 	if(!inFile){
 		//if the file cannot be opened
-		cout << "ERROR: The file could not be opened." << endl;
+        cout << "ERROR: File reading error in MTFList::readFile(string)" << endl;
 	} else {
 
 		//reading in the count (size of the list)
@@ -30,27 +30,22 @@ void MTFList::readFile(string filename)
 		}
 
 		//printing the list after adding all the elements
-		cout << "List after Additions: ";
+		cout << "MTF List after Additions: ";
 		this->printList();
 
 		//evoking the search function
-		int findCount = -1;
-		int traversalCount = 0;
 		inFile >> findCount;
+        findList = new int[findCount];
 		//the for-loop will run for the findcount that is
 		//read from the file
 		for(int i = 0; i < findCount; i++)
 		{
 			int toBeFound = -1;
 			inFile >> toBeFound;
-			traversalCount += this->search(toBeFound);
+            findList[i] = toBeFound;
 		}
 
-		//printing the list after searching
-		cout << "List after Queries: ";
-		this->printList();
-		//printing the traversal count
-		cout << "Traversal Count: " << traversalCount << endl;
+		
 	}
 }//END MTFList::readFile(string filename)
 
@@ -84,43 +79,52 @@ void MTFList::add(int data)
 //This function searches for the data
 //passed as the parameter
 //if not found, it will return the size of the list
-int MTFList::search(int data)
+void MTFList::search()
 {
 	//initial traversal count is zero
 	int traversalCount = 0;
-	Node* temp = head;
-	while(temp !=NULL)//while loop runs as long as temp is not NULL
-	{
-		//traversal count increments everytime it enters the while loop
-		traversalCount++;
-		if(data == temp->getData())
-		{
-			if(temp->getData() == head->getData())
-			{
-				//No need to edit the list
-			} else if(temp->getNext() == NULL) {
-				//moving the last element to the front
-				temp->getPrev()->setNext(NULL);
-				temp->setPrev(NULL);
-				temp->setNext(head);
-				head->setPrev(temp);
-				head = temp;
-			} else {
-				//moving the element in the middle to the front
-				temp->getPrev()->setNext(temp->getNext());
-				temp->getNext()->setPrev(temp->getPrev());
-				temp->setPrev(NULL);
-				temp->setNext(head);
-				head->setPrev(temp);
-				head = temp;
-			}
-			return traversalCount;
-		}
-		temp = temp->getNext();
-	}
-
-	//returns the traversal count
-	return traversalCount;
+    bool found = false;
+    
+    for(unsigned long i = 0; i < findCount; i++)
+    {
+        int data = findList[i];
+        Node* temp = head;
+        found = false;
+        while(temp != NULL && !found)//while loop runs as long as temp is not NULL
+        {
+            //traversal count increments everytime it enters the while loop
+            traversalCount++;
+            if(data == temp->getData())
+            {
+                found = true;
+                if(temp->getData() == head->getData())
+                {
+                    //No need to edit the list
+                } else if(temp->getNext() == NULL) {
+                    //moving the last element to the front
+                    temp->getPrev()->setNext(NULL);
+                    temp->setPrev(NULL);
+                    temp->setNext(head);
+                    head->setPrev(temp);
+                    head = temp;
+                } else {
+                    //moving the element in the middle to the front
+                    temp->getPrev()->setNext(temp->getNext());
+                    temp->getNext()->setPrev(temp->getPrev());
+                    temp->setPrev(NULL);
+                    temp->setNext(head);
+                    head->setPrev(temp);
+                    head = temp;
+                }
+            }
+            temp = temp->getNext();
+        }
+    }
+	//printing the list after searching
+    cout << "MTF List after Queries: ";
+    this->printList();
+    //printing the traversal count
+    cout << "MTF List Traversal Count: " << traversalCount << endl;
 }//MTFList::search(int data)
 
 

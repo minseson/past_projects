@@ -19,8 +19,8 @@
 #
 
 CPP = g++
-CFLAGS = -pg -Wall 
-SRCS = main.cpp Node.cpp MTFList.cpp
+CFLAGS = -std=c++0x
+SRCS = main.cpp OrderedList.cpp Node.cpp MTFList.cpp
 OBJS = ${SRCS:.cpp=.o}
 INCLS = ${SRCS:.cpp=.h}
 
@@ -40,9 +40,11 @@ Makefile.dep:
 
 submit:
 	rm -f submit.zip
-	zip submit.zip $(SRCS) $(INCLS) Makefile Makefile.dep
+	zip submit.zip $(SRCS) $(INCLS) Makefile Makefile.dep COSC160P1PR.pdf
 
 clean:
-	rm -f *.o a.out core Makefile.dep
+	rm -f *.o a.out core
 
 include Makefile.dep
+
+

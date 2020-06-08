@@ -6,7 +6,7 @@
 
 ## Goals
 
-In order to complete this assignment, you will need to:
+This program is aimed to:
 - Understand how to model network connections using sequence diagrams
   - Describe the operations required for a complete network interaction.
   - Model the communications between client and server processes, and between the threads supporting those processes.
@@ -19,11 +19,10 @@ In order to complete this assignment, you will need to:
 
 ## Description
 
-In this assignment you will implement your very own 
 
-In this assignment you will implement your very own internet chat protocol -- the ChattyChatChat protocol (CCC). The protocol governs how a single ChattyChatChat server mediates connections between any number of ChattyChatChat clients as they communicate with each other.
+In this program you will implement a basic internet chat protocol -- the ChattyChatChat protocol (CCC). The protocol governs how a single ChattyChatChat server mediates connections between any number of ChattyChatChat clients as they communicate with each other.
 
-Implementing this protocol will require that you create at least two Java classes:
+Implementing this protocol will employ two Java classes:
 - The ChattyChatChatServer, which is run on a single computer at a specified port and receives connections from clients.
 - The ChattyChatChatClient, which is run by each client computer and connects to the server.
 
@@ -34,8 +33,6 @@ The idea of text-based messaging has been around (almost) as long as networked c
 ## Specification and requirements
 
 ### Specification
-
-Your implementation of the ChattyChatChat protocol requires that you write two programs -- a ChattyChatChat server and a ChattyChatChat client.
 
 #### ChattyChatChatServer
 
@@ -51,7 +48,7 @@ The client program must be a class named `ChattyChatChatClient`; this program sh
 
 Note that the server must be running in order for any client to successfully connect.
 
-#### Testing hostnames, ports, and IDE settings
+#### Testing the application: hostnames, ports, and IDE settings
 
 You may choose to test your server/client code locally (with both processes on the same machine) or across different machines, including using cs-class. The following notes will ensure that you and your fellow classmates have success when working on the project:
 - If you are running your server code on cs-class, please use the following rules to pick a port for testing:

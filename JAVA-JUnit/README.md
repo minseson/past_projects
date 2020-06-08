@@ -1,11 +1,8 @@
-# Programming Assignment 3: Slippery Slot Machines
-## COSC 150 - Advanced Programming
+## Java JUnit practice
 
 - [Goals](#goals)
 - [Description](#description)
-- [Specification and requirements](#specification-and-requirements)
-- [Provided files](#provided-files)
-- [Grading rubric](#grading-rubric)
+- [Specification](#specification)
 
 ## Goals
 
@@ -24,9 +21,7 @@ In this assignment, you take the role of an online developer for Slippery Slot M
 
 SSMC has already generated a specification (below) of the rules for their slot machines, and several developers have implemented versions of their slot machine that claim to correctly implement these rules. Your task is to develop a comprehensive set of unit tests to verify these implementations' correctness. In addition, you will provide your own implementation of the rules (validated by your own test cases, of course).
 
-## Specification and requirements
-
-### Specification
+## Specification
 
 Each implementation of a Slippery Slot Machine provides a public interface of two methods, and follows a set of payoff rules (described below).
 
@@ -57,68 +52,3 @@ Each implementation of a SlipperySlot enacts the rules above through the followi
 
 - `int payOff( int[] values )`
   - This method takes as input an array representing a single spin (same form as the return value of `pullTheLever()`). It's return value is the correct payoff of that spin, computed according to the rules above.
-
-### Requirements
-
-You will create the following files and add them to your repository:
-- `ActivityDiagram.pdf`, a UML activity diagram which models the behavior of the `payOff` method described above.
-  - Your diagram may assume that the five-number spin has been provided (as input to the function).
-  - Your diagram should describe the logic used to detect each of the rules above.
-  - You may choose to create a "nested activity" diagram (that is, an interaction overview diagram) where high-level decision blocks (like "is this a full house?") are elaborated on in a subsequent diagram.
-  
-This diagram will be *hand-graded* by me after the design document due date; the automatic grader will only test for its existence.
-
-- `TestSlipperySlot.java`, a JUnit 5 test suite which contains JUnit tests on the `payOff` method of the SlipperySlot Machine.
-  - Your test suite should target a class named `SlipperySlot` (e.g., when instantating a slot machine for testing).
-  - Your test suite should be comprehensive enough to catch a flaw in the implementation of any of the `payOff` rules above.
-  - For sanity's sake, you may assume that `payOff` does not contain "malicious" code that triggers an error only when detecting a specific combination (e.g., "23-19-19-10-31"); instead, your tests should look for "unintentional" programming errors.
-
-- `BetterSlot.java`, an implementation of the rules described above. Your `BetterSlot` class must provide the two public methods described above.
-  - Your `BetterSlot` may have additional (private) implementation as you see fit, so long as it fulfils the public API described above.
-  - Your `BetterSlot` is not required to provide a `main` method, but may do so for your own testing purposes.
-  - You are *strongly* encouraged to run your JUnit tests against your `BetterSlot` implementation; however, be sure that your final commit has the tests targeting a `SlipperySlot` instance.
-      
-
-## Provided files
-
-As a convenience for developing/validating your `TestSlipperySlot` class, we have provided a pre-compiled `SlipperySlot` implementation as a .jar file. This implementation is *incorrect*, so a well-written test suite will find some errors with it. (*Note: Travis will run your test suite against several different SlipperySlot implementations, each with different kinds of errors.*).
-
-Your test suite will be able to instantiate objects of type `SlipperySlot` by adding this .jar to your classpath. To do this for an Eclipse Project,
-1. Go to the menu "Project -> Properties"
-2. Select the "Java build path" option from the list on the left.
-3. Select the "Libraries" tab from the choices on the top of the resulting window.
-4. Click on the "Classpath" line in the pane below, then click the "Add External JARS..." button to the right.
-5. Locate the `SlipperySlot.jar` file and click "Open" to add this file to your classpath.
-
-Note that the `SlipperySlot.jar` does NOT need to be inside your Eclipse workspace for this addition to work, so long as it is not going to move while you work on the project.
-
-Additionally, the following files related to project logistics are present in your repository:
-- `README.md` which provides this specification.
-- `.gitignore` which specifies files git should NOT track.
-- `.travis.yml` which provides instructions to trigger Travis testing.
-- `travis` a directory containing the testing scripts.
-
-You should not modify *any* of these files while working on your project; doing so may break Travis such that a test build does not run, or gives false/misleading feedback about your code.
-
-## Grading rubric
-
-Your score for this assignment is determined according to the following rubric.
-
-Amazing Feat | Points Awarded | Tested by TravisCI?
----          | :---:          | ---:
-**Design document tests**
-Your repository contains a file named `ActivityDiagram.pdf`          | 10 | Yes
-Your activity diagram is legible, neatly formatted, and uses proper UML styling and syntax.                                                              | 20 | *No*
-**TestSlipperySlot tests**
-Your repository contains `TestSlipperySlot.java`.                    |  5 | Yes
-Your `TestSlipperySlot.java` compiles.                               | 10 | Yes
-An incorrect `SlipperySlot` fails at least one of your tests (x7).   | 70 | Yes
-A correct `SlipperySlot` passes all of your tests.                   | 10 | Yes
-Your `TestSlipperySlot.java` uses consistent style, reasonable method/variable names, and is documented clearly.                                    | 10 | *No*
-**BetterSlot tests**
-Your repository contains `BetterSlot.java`                           |  5 | Yes
-Your `BetterSlot.java` compiles.                                     | 10 | Yes
-Your `BetterSlot` correctly implements the SSM rules (x10).          | 50 | Yes
-Your `BetterSlot.java` uses consistent style, reasonable method/variable names, and is documented clearly.                                               | 10 | *No*
-**Total points**                                                    | 210 |
-*Total TravisCI points*                                           | *170* |  

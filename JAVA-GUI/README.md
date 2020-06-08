@@ -1,4 +1,4 @@
-# This program is built with Java language to practice Java's Graphic User Interface.
+## Java Graphic User Interface practice
 
 - [Goals](#goals)
 - [Description](#description)

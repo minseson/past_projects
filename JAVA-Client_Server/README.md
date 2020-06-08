@@ -2,6 +2,7 @@
 
 - [Goals](#goals)
 - [Description](#description)
+- [Specification](#specification)
 
 ## Goals
 
@@ -46,10 +47,8 @@ A single instance of the ChattyChatChat server will server as the common point o
 
 #### ChattyChatChatClient
 
-The client program must be a class named `ChattyChatChatClient`; this program should accept two command-line arguments describing the server name and port to connect to. For example, to start a client and connect to a server running on port `9876` on `cs-class`, the command-line invocation would be:
-```
-java ChattyChatChatClient cs-class.uis.georgetown.edu 9876
-```
+The client program must be a class named `ChattyChatChatClient`; this program should accept two command-line arguments describing the server name and port to connect to. 
+
 Note that the server must be running in order for any client to successfully connect.
 
 #### Testing hostnames, ports, and IDE settings
@@ -75,21 +74,21 @@ The communication protocol for the chat clients and server should obey the follo
 - The CCC protocol also provides the following *chat commands* which should be interpreted by the server to perform a special task:
   - `/nick <name>` : Set this client's nickname to be the string `<name>`. For example:
   ```
-  /nick cosc150student
+  /nick Devon
   ```
-  would set the user's nickname to `cosc150student`.
+  would set the user's nickname to `Devon`.
     - The nickname command may be used more than once per session by any user; the current nickname is retained unless/until a subsequent `/nick` command is received.
     - Nicknames do *not* need to be unique on the server.
     - Nicknames are single-words and do not contain spaces.
     - Any additional characters beyond the first word may be ignored; that is, the above and below commands would have identical effect:
   ```
-  /nick cosc150student these words may be discarded
+  /nick Devon these words may be discarded
   ```
   - `/dm <name> <msg>` : Send a message to user(s) with the specified nickname. For example:
   ```
-  /dm cosc150student This is a "secret" message
+  /dm Devon This is a "secret" message
   ```
-  should deliver the message "This is a "secret" message" only to user(s) who have the nickname "cosc150student".
+  should deliver the message "This is a "secret" message" only to user(s) who have the nickname "Devon".
     - Only clients with the correct nickname should receive this message; nothing should be sent to any other clients.
     - If no client has the specified nickname, this message may be ignored.
     - If multiple clients have the specified nickname, *all* of them should receive the message.

@@ -6,7 +6,7 @@
 
 ## Goals
 
-In order to complete this assignment, you will need to:
+This program is aimed to:
 - Understand how to model decision-making behavior in UML
   - Create a UML activity diagram expressing the payout-deciding behavior used in this assignment.
 - Understand how to create a unit test suite for a Java class
@@ -17,9 +17,7 @@ In order to complete this assignment, you will need to:
 
 ## Description
 
-In this assignment, you take the role of an online developer for Slippery Slot Machine Company. SSMC creates themed slot machine apps, at the core of which is a program which generates random slot machine spins and computes corresponding payouts.
-
-SSMC has already generated a specification (below) of the rules for their slot machines, and several developers have implemented versions of their slot machine that claim to correctly implement these rules. Your task is to develop a comprehensive set of unit tests to verify these implementations' correctness. In addition, you will provide your own implementation of the rules (validated by your own test cases, of course).
+This program follows the the rules for the slot machines, and several developers have implemented versions of their slot machine that claim to correctly implement these rules. Your task is to develop a comprehensive set of unit tests to verify these implementations' correctness. In addition, you will provide your own implementation of the rules (validated by your own test cases, of course).
 
 ## Specification
 

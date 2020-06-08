@@ -1,0 +1,23 @@
+Made by Minseo Kang
+email: mk1955 [at] georgetown [dot] edu
+Updated on December 9th, 2019.
+For Professor Essick: Advanced Programming (COSC 150)
+
+Instruction for Maxwell's Demon Game
+
+If you initiate the game, there will be four objects in total; two red (hot) objects in the left box and two blue (cold) objects in the right box.
+These objects are confined in the boxes (black lines) unless it has a free white space to move around. 
+The summary of these objects are shown right below the boxes. There are counters for total number of objects in both boxes and number of different objects in both boxes.
+The summary also include the average speed and temperature of objects in either boxes and they are updated every second. The speed is in unit of centimeter per second.
+
+There are 7 buttons in total:
+1. If you click "Add Red on Left," a red (hot) object will be added on the left hand side box. The location of the object will be randonmly generated.
+2. If you click "Add Blue on Left," a blue (cold) object will be added on the left hand side box. The location of the object will be randonmly generated.
+3. If you click "Add Red on Right," a red (hot) object will be added on the right hand side box. The location of the object will be randonmly generated.
+4. If you click "Add Blue on Right," a blue (cold) object will be added on the right hand side box. The location of the object will be randonmly generated.
+5. If you click "Add Particle," a red (hot) and a blue (cold) objects will be added on both left and right sides boxes. The location of the objects will be randonmly generated.
+6. If you click "Reset," the game will be reset and you will return to the inital state of four particles; two red (hot) objects in the left box and two blue (cold) objects in the right box.
+7. If you click "Exit," the game will abort the screen and the program will be terminated.
+
+If you click the mouse elsewhere other than these seven buttons, the bar between two boxes will be removed and objects will freely move between two boxes.
+If you release the mouse click, then the bar is rebuilt and balls will be confined in the boxes again. It is shown whether the mouse is clicked above the boxes.

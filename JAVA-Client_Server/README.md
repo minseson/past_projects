@@ -1,3 +1,5 @@
+This program is made with Java language to perform a client-server chat application.
+
 
 - [Goals](#goals)
 - [Description](#description)

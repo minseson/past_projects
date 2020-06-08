@@ -1,5 +1,4 @@
-# Programming Assignment 5: Maxwell's Demon
-## COSC 150 - Advanced Programming
+# This program is built with Java language to practice Java's Graphic User Interface.
 
 - [Goals](#goals)
 - [Description](#description)

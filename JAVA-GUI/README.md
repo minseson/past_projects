@@ -6,7 +6,7 @@
 
 ## Goals
 
-In order to complete this assignment, you will need to:
+This application is aimed to:
 - Understand how to design a graphical user interface
   - Design the look of a graphical interface
   - Implement your design using Swing containers and components
@@ -31,13 +31,11 @@ In other words, Maxwell envisioned a box split into two halves, with a door betw
 
 ### Specification
 
-In this assignment you will create a Java program that lets the user play as Maxwell's demon. You will create a GUI for the program, an appropriate data model to store the state of the game, and controllers to allow the game to update over time and in response to the user.
-
-You are free to add additional features beyond those described below (e.g., high scores, play timers, awesome graphics) so long as they do not break the core functionality required.
+This is a Java program that lets the user play as Maxwell's demon. A GUI implemented for the program, an appropriate data model to store the state of the game, and controllers to allow the game to update over time and in response to the user.
 
 #### The Maxwell's Demon Interface
 
-Your game will start by displaying a user interface with the following components:
+This game will start by displaying a user interface with the following components:
 - A wide panel "playing area" divided in half by a line/wall down the middle (to create two chambers).
   - A collection of color-coded particles (red for hot, fast-moving particles and blue for cold, slow-moving particles).
   - A mouse-responsive "door" in the wall between the two chambers.
@@ -49,17 +47,15 @@ Your game will start by displaying a user interface with the following component
 
 #### Tracking Individual Particles
 
-Throughout the execution of your game, you will need to keep track of all the particles currently "present" in the game, and understand how to draw them on screen and update their positions over time. This will require tracking
+Throughout the execution of this game, it will need to keep track of all the particles currently "present" in the game, and understand how to draw them on screen and update their positions over time. This will require tracking
 - The position and velocity of each particle
 - The temperature/color of the particle (to draw it)
 
-For the purpose of this assignment, let 
+The distiction between fast and slow particles:
 - "fast" denote particles moving between 4 and 6 centimeters per second
 - "slow" denote speeds between 2 and 4 centimeters per second
- 
-(This is more manageable than the more realistic 200 meters per second that the median particle is moving in your room right now.) These values will permit transitions to screens with different resolutions with reasonable behavior.
 
 #### Computing the Average Temperature
 
-You will also need to compute/track the average temperature of all the particles on each side of the game. You should compute the temperature as proportional to the average of the squares of the speed of the particles on that side of the game.
+This program also computes/tracks the average temperature of all the particles on each side of the game. The temperature is proportional to the average of the squares of the speed of the particles on that side of the game.
 - It may be exceedingly convenient to choose (i.e., invent) physical units such that the constant of proportionality is equal to one. However, those who have an interest in the numerical simulation of physical systems may find more information [in this Wikipedia article](http://en.wikipedia.org/wiki/Kinetic_theory_of_gases#Temperature_and_kinetic_energy).
